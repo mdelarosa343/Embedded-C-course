@@ -89,7 +89,6 @@ int main(void)
 	/*setup*/
 
 	/*Enable clock to GPIOB*/
-//	RCC_AHB1EN_R |= RCC_GPIOBEN;
 	RCC->AHB1EN |= RCC_GPIOBEN;
  800020e:	4b1e      	ldr	r3, [pc, #120]	; (8000288 <main+0x80>)
  8000210:	6b1b      	ldr	r3, [r3, #48]	; 0x30
@@ -98,8 +97,6 @@ int main(void)
  8000218:	6313      	str	r3, [r2, #48]	; 0x30
 
 	/*Set pin 0 as output pin*/
-//	GPIOB_MODE_R |= (1U<<0);
-//	GPIOB_MODE_R &=~ (1U<<1);
 	GPIOB->MODER |= (1U<<0);
  800021a:	4b1c      	ldr	r3, [pc, #112]	; (800028c <main+0x84>)
  800021c:	681b      	ldr	r3, [r3, #0]
@@ -114,8 +111,6 @@ int main(void)
  8000230:	6013      	str	r3, [r2, #0]
 
 	/*Set pin 7 as output pin*/
-//	GPIOB_MODE_R |= (1U<<14);
-//	GPIOB_MODE_R &=~ (1U<<15);
 	GPIOB->MODER |= (1U<<14);
  8000232:	4b16      	ldr	r3, [pc, #88]	; (800028c <main+0x84>)
  8000234:	681b      	ldr	r3, [r3, #0]
@@ -130,8 +125,6 @@ int main(void)
  8000248:	6013      	str	r3, [r2, #0]
 
 	/*Set pin 14 as output pin*/
-//	GPIOB_MODE_R |= (1U<<28);
-//	GPIOB_MODE_R &=~ (1U<<29);
 	GPIOB->MODER |= (1U<<28);
  800024a:	4b10      	ldr	r3, [pc, #64]	; (800028c <main+0x84>)
  800024c:	681b      	ldr	r3, [r3, #0]
@@ -144,11 +137,11 @@ int main(void)
  800025a:	4a0c      	ldr	r2, [pc, #48]	; (800028c <main+0x84>)
  800025c:	f023 5300 	bic.w	r3, r3, #536870912	; 0x20000000
  8000260:	6013      	str	r3, [r2, #0]
+
 	/*run loop*/
 	for(;;){
 
 		/*toggle pin output data on led pins*/
-//		GPIOB_OD_R ^= (G_LED_PIN | B_LED_PIN | R_LED_PIN);
 		GPIOB->ODR ^= (G_LED_PIN | B_LED_PIN | R_LED_PIN);
  8000262:	4b0a      	ldr	r3, [pc, #40]	; (800028c <main+0x84>)
  8000264:	695a      	ldr	r2, [r3, #20]

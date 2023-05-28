@@ -1,0 +1,8 @@
+"./Src/ADC.o"
+"./Src/SYSTICK.o"
+"./Src/TIM.o"
+"./Src/UART.o"
+"./Src/main.o"
+"./Src/syscalls.o"
+"./Src/sysmem.o"
+"./Startup/startup_stm32f746zgtx.o"

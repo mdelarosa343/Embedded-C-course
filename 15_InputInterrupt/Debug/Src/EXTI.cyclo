@@ -1,0 +1,2 @@
+core_cm7.h:1896:22:__NVIC_EnableIRQ	2
+EXTI.c:5:6:pc13_exti_init	1
