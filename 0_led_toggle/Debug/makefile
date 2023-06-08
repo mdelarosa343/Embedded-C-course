@@ -59,8 +59,8 @@ all: main-build
 main-build: 0_led_toggle.elf secondary-outputs
 
 # Tool invocations
-0_led_toggle.elf 0_led_toggle.map: $(OBJS) $(USER_OBJS) C:\Users\mdela\Desktop\Embedded-C-course\0_led_toggle\STM32F746ZGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "0_led_toggle.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\mdela\Desktop\Embedded-C-course\0_led_toggle\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="0_led_toggle.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+0_led_toggle.elf 0_led_toggle.map: $(OBJS) $(USER_OBJS) C:\Users\mdelarosa\Desktop\Embedded-C-course\0_led_toggle\STM32F746ZGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "0_led_toggle.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\mdelarosa\Desktop\Embedded-C-course\0_led_toggle\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="0_led_toggle.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

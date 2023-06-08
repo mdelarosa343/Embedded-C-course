@@ -59,8 +59,8 @@ all: main-build
 main-build: 20_UART_TX_DMA.elf secondary-outputs
 
 # Tool invocations
-20_UART_TX_DMA.elf 20_UART_TX_DMA.map: $(OBJS) $(USER_OBJS) C:\Users\mdela\Desktop\Embedded-C-course\20_UART_TX_DMA\STM32F746ZGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "20_UART_TX_DMA.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\mdela\Desktop\Embedded-C-course\20_UART_TX_DMA\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="20_UART_TX_DMA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+20_UART_TX_DMA.elf 20_UART_TX_DMA.map: $(OBJS) $(USER_OBJS) C:\Users\mdelarosa\Desktop\Embedded-C-course\20_UART_TX_DMA\STM32F746ZGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "20_UART_TX_DMA.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\mdelarosa\Desktop\Embedded-C-course\20_UART_TX_DMA\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="20_UART_TX_DMA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

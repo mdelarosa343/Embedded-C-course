@@ -59,8 +59,8 @@ all: main-build
 main-build: 17_ADC_interrupt.elf secondary-outputs
 
 # Tool invocations
-17_ADC_interrupt.elf 17_ADC_interrupt.map: $(OBJS) $(USER_OBJS) C:\Users\mdela\Desktop\Embedded-C-course\17_ADC_interrupt\STM32F746ZGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "17_ADC_interrupt.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\mdela\Desktop\Embedded-C-course\17_ADC_interrupt\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="17_ADC_interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+17_ADC_interrupt.elf 17_ADC_interrupt.map: $(OBJS) $(USER_OBJS) C:\Users\mdelarosa\Desktop\Embedded-C-course\17_ADC_interrupt\STM32F746ZGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "17_ADC_interrupt.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\mdelarosa\Desktop\Embedded-C-course\17_ADC_interrupt\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="17_ADC_interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

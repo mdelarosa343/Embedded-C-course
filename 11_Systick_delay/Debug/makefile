@@ -59,8 +59,8 @@ all: main-build
 main-build: 11_Systick_delay.elf secondary-outputs
 
 # Tool invocations
-11_Systick_delay.elf 11_Systick_delay.map: $(OBJS) $(USER_OBJS) C:\Users\mdela\Desktop\Embedded-C-course\11_Systick_delay\STM32F746ZGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "11_Systick_delay.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\mdela\Desktop\Embedded-C-course\11_Systick_delay\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="11_Systick_delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+11_Systick_delay.elf 11_Systick_delay.map: $(OBJS) $(USER_OBJS) C:\Users\mdelarosa\Desktop\Embedded-C-course\11_Systick_delay\STM32F746ZGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "11_Systick_delay.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\mdelarosa\Desktop\Embedded-C-course\11_Systick_delay\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="11_Systick_delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

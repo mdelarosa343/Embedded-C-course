@@ -1,0 +1,6 @@
+SPI.c:5:6:SPI1_gpio_init	1
+SPI.c:27:6:SPI1_config	1
+SPI.c:63:6:SPI1_transmit	5
+SPI.c:80:6:SPI1_receive	5
+SPI.c:100:6:cs_enable	1
+SPI.c:106:6:cs_disable	1

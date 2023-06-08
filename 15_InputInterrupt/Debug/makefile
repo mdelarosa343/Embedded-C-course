@@ -59,8 +59,8 @@ all: main-build
 main-build: 15_InputInterrupt.elf secondary-outputs
 
 # Tool invocations
-15_InputInterrupt.elf 15_InputInterrupt.map: $(OBJS) $(USER_OBJS) C:\Users\mdela\Desktop\Embedded-C-course\15_InputInterrupt\STM32F746ZGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "15_InputInterrupt.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\mdela\Desktop\Embedded-C-course\15_InputInterrupt\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="15_InputInterrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+15_InputInterrupt.elf 15_InputInterrupt.map: $(OBJS) $(USER_OBJS) C:\Users\mdelarosa\Desktop\Embedded-C-course\15_InputInterrupt\STM32F746ZGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "15_InputInterrupt.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\mdelarosa\Desktop\Embedded-C-course\15_InputInterrupt\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="15_InputInterrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

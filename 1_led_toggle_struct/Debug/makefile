@@ -59,8 +59,8 @@ all: main-build
 main-build: 1_led_toggle_struct.elf secondary-outputs
 
 # Tool invocations
-1_led_toggle_struct.elf 1_led_toggle_struct.map: $(OBJS) $(USER_OBJS) C:\Users\mdela\Desktop\Embedded-C-course\1_led_toggle_struct\STM32F746ZGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "1_led_toggle_struct.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\mdela\Desktop\Embedded-C-course\1_led_toggle_struct\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1_led_toggle_struct.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+1_led_toggle_struct.elf 1_led_toggle_struct.map: $(OBJS) $(USER_OBJS) C:\Users\mdelarosa\Desktop\Embedded-C-course\1_led_toggle_struct\STM32F746ZGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "1_led_toggle_struct.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\mdelarosa\Desktop\Embedded-C-course\1_led_toggle_struct\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1_led_toggle_struct.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

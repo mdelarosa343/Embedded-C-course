@@ -59,8 +59,8 @@ all: main-build
 main-build: 7_UART_modular.elf secondary-outputs
 
 # Tool invocations
-7_UART_modular.elf 7_UART_modular.map: $(OBJS) $(USER_OBJS) C:\Users\mdela\Desktop\Embedded-C-course\7_UART_modular\STM32F746ZGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "7_UART_modular.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\mdela\Desktop\Embedded-C-course\7_UART_modular\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="7_UART_modular.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+7_UART_modular.elf 7_UART_modular.map: $(OBJS) $(USER_OBJS) C:\Users\mdelarosa\Desktop\Embedded-C-course\7_UART_modular\STM32F746ZGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "7_UART_modular.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\mdelarosa\Desktop\Embedded-C-course\7_UART_modular\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="7_UART_modular.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

@@ -1,0 +1,4 @@
+IMU.c:10:6:IMU_read_address	1
+IMU.c:15:6:IMU_write	1
+IMU.c:20:6:IMU_read_6_values	1
+IMU.c:41:6:IMU_init	1

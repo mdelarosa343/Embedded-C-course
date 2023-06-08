@@ -1,13 +1,13 @@
 #include "stm32f746xx.h"
 #include "core_cm7.h"
 
-#define SYSTICK_LOAD_VAL 		16000 //CPU cycles per millisecond
+#define SYSTICK_LOAD_VAL 		16 //CPU cycles per microsecond
 
-void SysTickDelayMs(int delay)
+void SysTickDelaymicrosecond(int delay)
 {
 	//Configure Systick
 
-	//Reload timer with number of clocks per millisecond
+	//Reload timer with number of clocks per microsecond
 	SysTick->LOAD = SYSTICK_LOAD_VAL;
 
 	//clear systick current value register

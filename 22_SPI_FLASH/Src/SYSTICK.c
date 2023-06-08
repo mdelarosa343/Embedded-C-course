@@ -1,0 +1,26 @@
+#include "stm32f746xx.h"
+#include "core_cm7.h"
+
+#define SYSTICK_LOAD_VAL 		16 //CPU cycles per microsecond
+
+void SysTickDelaymicrosecond(int delay)
+{
+	//Configure Systick
+
+	//Reload timer with number of clocks per microsecond
+	SysTick->LOAD = SYSTICK_LOAD_VAL;
+
+	//clear systick current value register
+	SysTick->VAL = 0;
+
+	// enable systick and select clock source as CPU clock
+	SysTick->CTRL = (SysTick_CTRL_ENABLE_Msk | SysTick_CTRL_CLKSOURCE_Msk);
+
+	for(int i=0; i<delay; i++)
+	{
+		//wait for count flag to be set before looping again
+		while((SysTick->CTRL & SysTick_CTRL_COUNTFLAG_Msk) == 0){}
+	}
+	SysTick->CTRL = 0;
+}
+

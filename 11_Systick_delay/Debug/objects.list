@@ -1,5 +1,4 @@
 "./Src/ADC.o"
-"./Src/SYSTICK.o"
 "./Src/UART.o"
 "./Src/main.o"
 "./Src/syscalls.o"
